@@ -1,17 +1,18 @@
 package pack2;
 
-import pack1.Sum1;
-
 public class BankCard {
 
+    // Composition
+    Sum1 sum = new Sum1();
 
-    Sum1 sum = new Sum1(); // Composition
+    // Variables
     private  long cardNumber;
     private short expMonth;
     private short expYear;
-    private long x; // for test reason. Temperary. Will get Sum of Moneyfrom Sum1 class
+    private int cVV;
+    private long x; // for Test reason. Temperary. Will get Sum of Moneyfrom Sum1 class
 
-
+   // Gettery Settery
     public void setCardNumber(long cardNumber) {
         this.cardNumber = cardNumber;
     }
@@ -25,7 +26,11 @@ public class BankCard {
 
     }
 
-     public long getCardNumber() {
+    public void setcVV(int cVV) {
+        this.cVV = cVV;
+    }
+
+    public long getCardNumber() {
         return cardNumber;
     }
 
@@ -37,11 +42,34 @@ public class BankCard {
         return expYear;
     }
 
+    public long getcVV() {
+        return cVV;
+    }
+
+    // Constructors
+
+        public BankCard () {}  // by default
+
+       public BankCard (long cardNumberPar, int cVVPar, int expMonthPar, int expYearPar){
+
+        this.cardNumber = cardNumberPar;
+        this.cVV = cVVPar;
+        this.expMonth =(short) expMonthPar;
+        this.expYear = (short) expYearPar;
+        this.sum = new Sum1();
+
+    }
+
     public static void main(String[] args) {
 
        BankCard objB =new BankCard();
+       BankCard constrSParam =new BankCard(1234567812345678l, 123, 10, 2017);
+        Sum1 objCur = new Sum1 (0);
+        Sum1 objSum = new Sum1(1000l);
 
-       // Sum1 sum;
+
+
+        // Sum1 sum;
 
 
          objB.sum.setSumMon(3000l);
