@@ -49,7 +49,7 @@ public class Bankomat {
         this.sum = new Sum1(sumMonPar, currenCodPar);
     }
 
-    @Override
+   /* @Override
     public String toString() {
         return "Bankomat{" +
                 "sum=" + sum +
@@ -58,7 +58,7 @@ public class Bankomat {
                 ", addr='" + addr + '\'' +
                 ", x=" + x +
                 '}';
-    }
+    }*/
 
     public static void main(String[] args) {
 
