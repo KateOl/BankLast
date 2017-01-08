@@ -1,5 +1,7 @@
 package pack2;
 
+import pack2.Sum1;
+
 public class BankCard {
 
     // Composition
