@@ -52,6 +52,15 @@ public class BankCard {
 
         public BankCard () {}  // by default
 
+    public BankCard (long cardNumberPar){
+
+        this.cardNumber = cardNumberPar;
+        this.cVV = 0;
+        this.expMonth =(short) 0;
+        this.expYear = (short) 0;
+
+    }
+
        public BankCard (long cardNumberPar, int cVVPar, int expMonthPar, int expYearPar){
 
         this.cardNumber = cardNumberPar;
@@ -66,8 +75,11 @@ public class BankCard {
 
        BankCard objB =new BankCard();
        BankCard constrSParam =new BankCard(1234567812345678l, 123, 10, 2017);
+        BankCard Card2Numb = new BankCard(13334448912345l);
         Sum1 objCur = new Sum1 (0);
         Sum1 objSum = new Sum1(1000l);
+
+
 
 
 
